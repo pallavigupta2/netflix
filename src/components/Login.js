@@ -7,15 +7,14 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { BACKGROUND_IMAGE } from "../utils/constant";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const [error, setError] = useState();
-  const navigate = useNavigate();
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const nameRef = useRef(null);
@@ -42,7 +41,6 @@ const Login = () => {
               // Profile updated!
               const { uid, email, displayName } = auth.currentUser;
               dispatch(addUser({ uid, email, displayName }));
-              navigate("/browse");
             })
             .catch((error) => {
               setError(error.errorMessage);
@@ -59,13 +57,9 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          const { uid, email, displayName } = auth.currentUser;
-          dispatch(addUser({ uid, email, displayName }));
-          navigate("/browse");
-          // console.log("user",user)
+         
         })
         .catch((error) => {
-          //const errorCode = error.code;
           const errorMessage = error.message;
           setError(errorMessage);
         });
@@ -76,7 +70,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/20bf1f4d-1c73-48fd-8689-310d6dd80efc/81bdc063-cb8f-4afe-8a02-a3131ca4ef5e/IN-en-20240812-POP_SIGNUP_TWO_WEEKS-perspective_WEB_7998f3b6-63e3-424a-8328-550cf777ddce_small.jpg"
+          src={BACKGROUND_IMAGE}
           alt="back-img"
         />
       </div>
