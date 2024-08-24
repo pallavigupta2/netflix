@@ -42,7 +42,7 @@ useEffect(()=>{
     },[])
 
   return (
-    <div className="px-5 py-3 absolute bg-gradient-to-b from-black z-10 w-screen flex justify-between">
+    <div className="px-5 py-3 absolute bg-gradient-to-b from-black z-10 w-full flex justify-between">
       <img
         className="w-48"
         src={NETFLIX_LOGO}
