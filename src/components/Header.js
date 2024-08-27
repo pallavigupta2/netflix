@@ -51,10 +51,10 @@ dispatch(languageChange(e.target.value))
 }
 
   return (
-    <div className="px-5 py-3 absolute bg-gradient-to-b from-black z-10 w-full flex justify-between">
-      <img className="w-40" src={NETFLIX_LOGO} alt="logo" />
+    <div className="px-5 py-3 absolute bg-gradient-to-b from-black z-10 w-full flex flex-col justify-between md:flex-row">
+      <img className="w-40 mx-auto md:mx-0" src={NETFLIX_LOGO} alt="logo" />
       {userExist && (
-        <div className="">
+        <div className="mx-auto md:mx-0">
           {showgptSearchc && <select className="bg-red-600 p-1 text-white rounded-md" onChange={handleLangChange}>
             {
               LANGUAGE_SUPPORTED.map((lang)=><option value={lang.identifier} key={lang.identifier}>{lang.name}</option>)

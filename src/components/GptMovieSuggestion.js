@@ -7,7 +7,7 @@ const GptMovieSuggestion = () => {
     console.log(showSearchMovies)
     if(!showSearchMovies) return null;
   return (
-    <div className='bg-black bg-opacity-80 mt-28 pb-10 pt-3'>
+    <div className='bg-black bg-opacity-80 mt-40 pb-10 pt-3 px-2 mx-2'>
       <div>
       <MovieList movieCategory="Search Result" movies={showSearchMovies}/>
       </div>

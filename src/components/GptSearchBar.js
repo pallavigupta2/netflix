@@ -22,9 +22,9 @@ const GptSearchBar = () => {
     getsearchMovies();
   };
   return (
-    <div className="pt-[12%] flex justify-center">
+    <div className=" pt-[60%] md:pt-[12%] flex justify-center">
       <form
-        className="bg-black p-2 grid grid-cols-12 w-1/2 rounded-md"
+        className="bg-black p-2 grid grid-cols-12 md:w-1/2 w-full rounded-md"
         onSubmit={(e) => e.preventDefault()}
       >
         <input

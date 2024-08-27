@@ -70,12 +70,13 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
+        className='h-screen object-cover md:h-auto md:object-contain'
           src={BACKGROUND_IMAGE}
           alt="back-img"
         />
       </div>
       <form
-        className="absolute w-3/12 bg-black mx-auto right-0 left-0 my-36 text-white p-12 bg-opacity-80"
+        className="absolute w-full md:w-3/12 bg-black mx-auto right-0 left-0 my-36 text-white p-12 bg-opacity-80"
         onSubmit={(e) => e.preventDefault()}
       >
         <h1 className="text-4xl my-2 font-bold">
